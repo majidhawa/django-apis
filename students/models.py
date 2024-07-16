@@ -14,7 +14,7 @@ class Student(models.Model):
     address = models.TextField()
     bio = models.TextField()
     photo = models.ImageField(upload_to='photos/')
-    courses = models.ManyToManyField('course.Course', related_name='student')
+    courses = models.ManyToManyField('courses.Course', related_name='student')
     classes = models.ManyToManyField('classes.Class', related_name='student')
     
     objects:BaseManager['Student']
